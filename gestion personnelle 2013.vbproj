@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE87BAD9-62C2-452F-9EE8-D3FA1D3F23F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>gestion_personnelle_2013.My.MyApplication</StartupObject>
+    <RootNamespace>gestion_personnelle_2013</RootNamespace>
+    <AssemblyName>gestion personnelle 2013</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>gestion personnelle 2013.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>gestion personnelle 2013.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceuil.designer.vb">
+      <DependentUpon>Acceuil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Acceuil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attestation_salaire.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attestation_salaire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="attestation_stage.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attestation_stage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="attestation_travail.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attestation_travail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="calcule_salaire.Designer.vb">
+      <DependentUpon>calcule_salaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="calcule_salaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="candidature.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="candidature.Designer.vb">
+      <DependentUpon>candidature.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentification.Designer.vb">
+      <DependentUpon>authentification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="authentification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrat_De_Travail_A_Tache_Déterminée.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contrat_De_Travail_A_Tache_Déterminée.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="detail_candidat.Designer.vb">
+      <DependentUpon>detail_candidat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="detail_candidat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detail_salarie.designer.vb">
+      <DependentUpon>detail_salarie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="detail_salarie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detail_stg.Designer.vb">
+      <DependentUpon>detail_stg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="detail_stg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="domicilation_du_salaire.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>domicilation_du_salaire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DOSSIER_ADM_SALARIE.Designer.vb">
+      <DependentUpon>DOSSIER_ADM_SALARIE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DOSSIER_ADM_SALARIE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lettre de recomendation.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lettre de recomendation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mise_ajours_stagiaire.Designer.vb">
+      <DependentUpon>mise_ajours_stagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mise_ajours_stagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mise à jour salariés.designer.vb">
+      <DependentUpon>Mise à jour salariés.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mise à jour salariés.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pointage2.designer.vb">
+      <DependentUpon>Pointage2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pointage2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rechercher Salarié.designer.vb">
+      <DependentUpon>Rechercher Salarié.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rechercher Salarié.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recherche_candidat.Designer.vb">
+      <DependentUpon>recherche_candidat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recherche_candidat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recherche_stagiaire.Designer.vb">
+      <DependentUpon>recherche_stagiaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recherche_stagiaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecrutementCandidat.Designer.vb">
+      <DependentUpon>RecrutementCandidat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecrutementCandidat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recrutement_stg.Designer.vb">
+      <DependentUpon>recrutement_stg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recrutement_stg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saisie_de_paie.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>saisie_de_paie.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="suivit_salaire.Designer.vb">
+      <DependentUpon>suivit_salaire.vb</DependentUpon>
+    </Compile>
+    <Compile Include="suivit_salaire.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Acceuil.resx">
+      <DependentUpon>Acceuil.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attestation_salaire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>attestation_salaire.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attestation_stage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>attestation_stage.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attestation_travail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>attestation_travail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calcule_salaire.resx">
+      <DependentUpon>calcule_salaire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="candidature.resx">
+      <DependentUpon>candidature.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authentification.resx">
+      <DependentUpon>authentification.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contrat_De_Travail_A_Tache_Déterminée.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contrat_De_Travail_A_Tache_Déterminée.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detail_candidat.resx">
+      <DependentUpon>detail_candidat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detail_salarie.resx">
+      <DependentUpon>detail_salarie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detail_stg.resx">
+      <DependentUpon>detail_stg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="domicilation_du_salaire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>domicilation_du_salaire.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DOSSIER_ADM_SALARIE.resx">
+      <DependentUpon>DOSSIER_ADM_SALARIE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lettre de recomendation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lettre de recomendation.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mise_ajours_stagiaire.resx">
+      <DependentUpon>mise_ajours_stagiaire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mise à jour salariés.fr.resx">
+      <DependentUpon>Mise à jour salariés.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mise à jour salariés.resx">
+      <DependentUpon>Mise à jour salariés.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pointage2.resx">
+      <DependentUpon>Pointage2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rechercher Salarié.resx">
+      <DependentUpon>Rechercher Salarié.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recherche_candidat.resx">
+      <DependentUpon>recherche_candidat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recherche_stagiaire.resx">
+      <DependentUpon>recherche_stagiaire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecrutementCandidat.resx">
+      <DependentUpon>RecrutementCandidat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recrutement_stg.resx">
+      <DependentUpon>recrutement_stg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saisie_de_paie.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>saisie_de_paie.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="suivit_salaire.resx">
+      <DependentUpon>suivit_salaire.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intttt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fotolia_349127412_M.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fotolia_349127412_M1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\hh.png" />
+    <None Include="Resources\images21.jpg" />
+    <None Include="Resources\hh2.png" />
+    <None Include="Resources\hh1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
